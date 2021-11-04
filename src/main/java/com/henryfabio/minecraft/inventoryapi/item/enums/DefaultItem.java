@@ -23,7 +23,7 @@ public enum DefaultItem {
     BACK(viewer -> {
         ItemStack itemStack = new ItemStack(Material.ARROW);
         ItemMeta itemMeta = itemStack.getItemMeta();
-        itemMeta.setDisplayName("§aVoltar");
+        itemMeta.setDisplayName("§aBack");
         itemStack.setItemMeta(itemMeta);
 
         return InventoryItem.of(itemStack)
@@ -39,7 +39,7 @@ public enum DefaultItem {
     CLOSE(viewer -> {
         ItemStack itemStack = new ItemStack(Material.BARRIER);
         ItemMeta itemMeta = itemStack.getItemMeta();
-        itemMeta.setDisplayName("§cFechar");
+        itemMeta.setDisplayName("§cClose");
         itemStack.setItemMeta(itemMeta);
 
         return InventoryItem.of(itemStack)
@@ -51,7 +51,7 @@ public enum DefaultItem {
     EMPTY(viewer -> {
         ItemStack itemStack = MaterialUtil.convertFromLegacy("WEB", 0);
         ItemMeta itemMeta = itemStack.getItemMeta();
-        itemMeta.setDisplayName("§cVazio");
+        itemMeta.setDisplayName("§cEmpty");
         itemStack.setItemMeta(itemMeta);
 
         return InventoryItem.of(itemStack);
@@ -64,7 +64,7 @@ public enum DefaultItem {
 
         ItemStack itemStack = new ItemStack(Material.ARROW);
         ItemMeta itemMeta = itemStack.getItemMeta();
-        itemMeta.setDisplayName("§aPróxima Página: " + (pagedViewer.getCurrentPage() + 1));
+        itemMeta.setDisplayName("§aNext Page: " + (pagedViewer.getCurrentPage() + 1));
         itemStack.setItemMeta(itemMeta);
 
         return InventoryItem.of(itemStack)
@@ -78,7 +78,7 @@ public enum DefaultItem {
 
         ItemStack itemStack = new ItemStack(Material.ARROW);
         ItemMeta itemMeta = itemStack.getItemMeta();
-        itemMeta.setDisplayName("§aPágina Anterior: " + (pagedViewer.getCurrentPage() - 1));
+        itemMeta.setDisplayName("§aBack Page: " + (pagedViewer.getCurrentPage() - 1));
         itemStack.setItemMeta(itemMeta);
 
         return InventoryItem.of(itemStack)
